@@ -1,25 +1,30 @@
-Punggol AV-Guard: AI-Assisted V2P Safety System for Autonomous Vehicles
+# Punggol AV-Guard: AI-Assisted V2P Safety System for Autonomous Vehicles
 
-Brief Description
+## Brief Description
 
-Autonomous vehicles (AVs) deployed in urban environments such as Punggol operate in complex and pedestrian-heavy scenarios. Although AVs are equipped with advanced perception systems such as LiDAR, radar, and cameras, they still face limitations in detecting pedestrians in occluded environments, such as behind buses, parked vehicles, or infrastructure. These limitations may lead to delayed detection and reduced reaction time, posing safety risks to vulnerable road users including pedestrians, cyclists, and wheelchair users.
-This project is about creating a safety system that uses artificial intelligence to help autonomous shuttles and pedestrians interact safely in Punggol. The system works by having pedestrians' smartphones or wearable devices send out real-time information like their location, speed, and direction. This is made possible by special communication technologies like IEEE 802.11p or C-V2X, which allow for fast and reliable data transfer between devices. By using these technologies, the system can help prevent accidents and make sure pedestrians and autonomous shuttles can share the road safely.
+Autonomous vehicles (AVs) deployed in urban environments such as Punggol operate in complex and pedestrian-dense scenarios. Although AVs are equipped with advanced perception systems such as LiDAR, radar, and cameras, these systems still face limitations in detecting pedestrians in occluded environments. Examples include situations where pedestrians are hidden behind buses, parked vehicles, or roadside infrastructure. Such occlusions may delay detection and reduce the reaction time available for the vehicle, creating safety risks for vulnerable road users including pedestrians, cyclists, and wheelchair users.
 
-The autonomous vehicle gets this information through a special computer on board, called the onboard unit. This computer has a smart module that uses artificial intelligence to figure out if a crash might happen. It looks at things like how far away something is, how fast it's moving, and how long it would take to hit it. By using these things, the system can guess what might happen next between the vehicle and a person walking, instead of just looking at where they are right now.
-The new system is different from the usual advanced driver assistance systems. These traditional systems rely on seeing things and reacting to them. But the proposed system can predict what might happen before it's even visible. This means it can help self-driving cars make safer decisions earlier on. Unlike the old systems, it doesn't just react to things - it can actually anticipate what might happen and get ready for it. This is a big change from the usual way of doing things, where cars only respond to what they can see right in front of them. With this new system, self-driving cars can be more proactive and make better choices to avoid accidents making the roads safer for everyone.
+This project proposes an AI-assisted Vehicle-to-Pedestrian (V2P) safety system designed to improve interaction between autonomous vehicles and pedestrians in Punggol. In the proposed system, pedestrians’ smartphones or wearable devices broadcast real-time information such as location, speed, and direction of movement. This communication is enabled using vehicular communication technologies such as **IEEE 802.11p** or **Cellular-V2X (C-V2X)**, which provide low-latency and reliable data exchange between pedestrians and vehicles.
 
-Literature Review and Differentiation
+The autonomous vehicle receives this information through an onboard unit (OBU). The OBU contains a prediction module that evaluates potential collision risks using contextual information such as relative distance, relative speed, and predicted movement trajectories. By analysing these parameters, the system calculates the **Time-To-Collision (TTC)** between the vehicle and nearby pedestrians.
 
-Existing safety systems in vehicular environments primarily rely on three approaches: Advanced Driver Assistance Systems (ADAS), smart infrastructure-based systems, and Vehicle-to-Everything (V2X) communication.
+Unlike conventional Advanced Driver Assistance Systems (ADAS), which primarily rely on perception sensors and reactive responses, the proposed system introduces a **predictive safety mechanism**. By receiving pedestrian information directly through V2P communication, the vehicle can anticipate potential conflicts before they become visible to onboard sensors. This enables earlier risk detection and proactive decision-making, improving safety in pedestrian-heavy environments such as residential districts.
 
-Advanced driver assistance systems, like cameras that spot pedestrians and LiDAR sensors, help us see what's around us in real time. But these systems only react to what they can see, and that's a problem. They can't detect things that are hidden from view, so they can be slow to respond in certain situations. This is a big concern, especially when it comes to keeping people safe on the road.
-Smart traffic systems and infrastructure-based solutions, such as intelligent traffic lights and roadside monitoring units, enhance safety by coordinating traffic flow. However, these systems depend heavily on fixed infrastructure and may not scale effectively across all urban environments (Rahman et al., 2020).
+---
 
-We already have systems that let cars talk to each other and to people walking around, but most of them just warn us when someone is nearby, instead of really thinking about what might happen next. For example, they might just say "hey, there's a car coming" or "watch out, there's a person crossing the street", but they don't really try to figure out if something bad is likely to happen.
+## Literature Review and Differentiation
 
-The proposed system differs in several key aspects. First, it is predictive rather than reactive, using AI-based risk evaluation to anticipate collisions. Second, it is designed specifically for autonomous vehicle integration, enabling direct interaction with vehicle control systems. Third, it focuses on pedestrian-heavy residential environments such as Punggol, where interactions between vehicles and vulnerable road users are frequent. Finally, the system incorporates edge-based processing to ensure low latency and real-time responsiveness without reliance on cloud infrastructure.
+Existing safety systems in vehicular environments generally rely on three main approaches: **Advanced Driver Assistance Systems (ADAS), infrastructure-based smart traffic systems, and Vehicle-to-Everything (V2X) communication technologies**.
 
-System Architecture
+Advanced Driver Assistance Systems utilise sensors such as cameras, radar, and LiDAR to detect pedestrians and surrounding objects in real time. While these technologies significantly enhance situational awareness, they remain limited by **line-of-sight constraints**. Pedestrians that are hidden by obstacles may not be detected until they become visible, reducing the available reaction time for the vehicle.
+
+Infrastructure-based smart traffic systems, such as intelligent traffic lights and roadside monitoring units, improve traffic coordination and safety by collecting and analysing traffic data. However, these systems rely heavily on **fixed roadside infrastructure**, which may limit scalability and increase deployment costs in large urban environments (Rahman et al., 2020).
+
+Vehicle-to-Everything (V2X) communication technologies enable vehicles to exchange information with other vehicles, infrastructure, and pedestrians. Many existing V2P implementations primarily provide **proximity-based warnings**, alerting drivers when pedestrians are nearby. However, these systems typically do not perform predictive risk analysis to determine whether a collision is likely to occur.
+
+The proposed system differs from existing approaches in several important aspects. First, it introduces a **predictive risk evaluation mechanism** based on Time-To-Collision (TTC), allowing the vehicle to anticipate potential conflicts rather than simply reacting to detected objects. Second, the system is designed specifically for **autonomous vehicle integration**, enabling the risk evaluation module to interact directly with vehicle control systems. Third, the system focuses on **pedestrian-heavy residential environments such as Punggol**, where frequent interactions between autonomous vehicles and vulnerable road users occur. Finally, the system incorporates **edge-based processing**, ensuring low-latency decision-making without relying on cloud-based computation.
+
+## System Architecture
 
 <img width="303" height="789" alt="image" src="https://github.com/user-attachments/assets/a2757dcd-1bd0-4d6f-a547-08d3ebb00d6e" />
 
@@ -38,7 +43,7 @@ So, the action layer is what helps the self-driving car react to any potential d
 
 The system adopts an edge-based processing approach within the vehicle onboard unit to minimise latency and ensure real-time responsiveness. Cloud-based processing was considered but rejected due to additional communication delays and reliability concerns in safety-critical applications. By performing computation locally within the vehicle, the system ensures consistent performance even in environments with unstable network connectivity.
 
-Functions and Messages
+## Functions and Messages
 
 The system operates through structured message exchanges between pedestrian devices and autonomous vehicles.
 
@@ -68,7 +73,7 @@ and relative velocity, and computes the Time-To-Collision (TTC). Based on
 predefined thresholds, the system classifies the situation into HIGH, MEDIUM, 
 or LOW risk and triggers the appropriate vehicle response.
 
-Engineering Considerations in Risk Evaluation
+## Engineering Considerations in Risk Evaluation
 
 The use of time-to-collision (TTC) as the primary risk metric allows the system to account for both relative distance and relative speed, making it more suitable for dynamic environments compared to distance-only methods.
 
@@ -76,45 +81,61 @@ The selected TTC thresholds (1.5 s for high risk and 3 s for medium risk) repres
 
 Additionally, the system classifies risk into multiple levels rather than a binary decision. This enables proportional responses, such as gradual deceleration for medium risk and immediate intervention for high-risk scenarios.
 
-Hardware and Communication Parameters
+## Hardware and Communication Parameters
 
 <img width="818" height="724" alt="image" src="https://github.com/user-attachments/assets/c427af04-f4cb-47b7-b95f-f68d12619c1d" />
 
-Use Case Scenario
+## Use Case Scenario
 
-In a pedestrian-heavy zone in Punggol, an autonomous shuttle is approaching a crossing near a bus stop. A pedestrian is walking towards the crossing while partially obscured by the bus, making it difficult for the vehicle’s onboard sensors to detect the pedestrian early.
+In a pedestrian-heavy zone in Punggol, an autonomous shuttle is approaching a pedestrian crossing near a bus stop. A pedestrian begins walking towards the crossing while partially obscured by the bus, making early detection difficult for the vehicle’s onboard perception sensors.
 
-The pedestrian's phone is always sending out its location, speed, and direction to nearby cars using a special kind of communication called V2P. The self-driving car gets this information through a device on board and uses it to figure out where the pedestrian is likely to go next, compared to where the car is headed.
+The pedestrian’s smartphone continuously broadcasts its location, speed, and movement direction using Vehicle-to-Pedestrian (V2P) communication. The autonomous vehicle receives this information through its onboard unit (OBU) and combines it with its own motion data.
 
-When the AI system in a car thinks it's going to crash, it figures out how long it has before that happens. If it's not enough time to stop safely, the car decides this is a really dangerous situation. So, it starts slowing down in a controlled way before it even gets to where it might hit something. Sometimes, it can also send a warning to a pedestrian, like a vibration on their phone, to let them know they might be in danger.
+The system then predicts the future trajectories of both the vehicle and the pedestrian. Using parameters such as relative distance and relative velocity, the system calculates the Time-To-Collision (TTC) between the two entities.
 
-The system helps the self-driving car stay safe by predicting what might happen and finding potential problems early, even when it can't see everything clearly. This way, the car can react quickly and avoid accidents, making it a more reliable way to travel.
+If the calculated TTC indicates a potential collision risk, the vehicle initiates an appropriate response. This may include controlled deceleration or issuing warnings through the vehicle interface. In some situations, the pedestrian may also receive a warning through their smartphone or wearable device.
 
-Engineering Design Considerations
+By predicting potential conflicts before the pedestrian becomes visible to the vehicle’s sensors, the system enables earlier safety interventions and improves overall road safety in pedestrian-dense environments.
 
-Several engineering trade-offs were considered during the design of the proposed system.
+---
 
-Communication Technology Selection:
+## Engineering Design Considerations
 
-Different communication technologies such as Bluetooth Low Energy (BLE), IEEE 802.11p, and C-V2X were evaluated. BLE offers low power consumption but suffers from limited range and higher latency, making it less suitable for safety-critical applications. IEEE 802.11p was selected due to its ability to support direct communication with low latency (<100 ms) and sufficient range (150–300 m), which meets the requirements of real-time pedestrian detection.
+Several engineering trade-offs were evaluated during the design of the proposed system.
 
-Edge vs Cloud Processing
+### Communication Technology Selection
 
-Cloud-based processing provides greater computational capability but introduces additional latency and dependency on network connectivity. In contrast, edge processing ensures faster response times and higher reliability. Given the safety-critical nature of collision avoidance, edge processing was selected to guarantee consistent system performance.
+Multiple communication technologies were considered, including Bluetooth Low Energy (BLE), IEEE 802.11p, and Cellular V2X (C-V2X).
 
-Risk Evaluation Method
+BLE offers low power consumption but suffers from limited communication range and higher latency, making it unsuitable for safety-critical vehicular applications. IEEE 802.11p was selected because it supports direct communication with low latency (<100 ms) and a communication range of approximately 150–300 m, which meets the requirements for real-time pedestrian detection.
 
-Two approaches were considered: distance-based detection and time-to-collision (TTC). Distance-based methods do not account for motion dynamics and may produce inaccurate risk estimates in moving scenarios. TTC was selected as it incorporates both distance and relative speed, providing a more accurate prediction of collision likelihood.
+### Edge vs Cloud Processing
 
-False Alert Reduction
+Cloud-based processing provides greater computational capability but introduces additional latency and reliance on network connectivity. In contrast, edge processing enables faster response times and higher reliability.
 
-Frequent false alerts can lead to system desensitisation and reduced effectiveness. To mitigate this, the system implements multi-level risk classification and threshold-based filtering. Alerts are only triggered when TTC falls below defined thresholds, ensuring that warnings are meaningful and actionable.
+Given the safety-critical nature of collision avoidance systems, edge processing was selected to ensure real-time decision-making and consistent system performance even in environments with unstable connectivity.
 
-System Scalability
+### Risk Evaluation Method
 
-The system is designed to operate without reliance on roadside infrastructure, allowing it to be deployed in residential environments such as Punggol with minimal additional cost. This improves scalability and reduces deployment complexity.
+Two approaches were considered for collision risk estimation: distance-based detection and Time-To-Collision (TTC).
 
-Decision Log
+Distance-based methods only consider the spatial proximity between the vehicle and pedestrian and do not account for motion dynamics. As a result, they may produce inaccurate risk estimates when both objects are moving.
+
+The TTC approach was selected because it incorporates both relative distance and relative velocity, enabling a more accurate prediction of potential collision events.
+
+### False Alert Reduction
+
+Frequent false alerts can reduce driver trust and lead to system desensitisation. To mitigate this issue, the proposed system uses multi-level risk classification and threshold-based filtering.
+
+Warnings are generated only when TTC falls below predefined thresholds, ensuring that alerts remain meaningful and actionable.
+
+### System Scalability
+
+The proposed system is designed to operate without dependence on fixed roadside infrastructure. This allows deployment in residential environments such as Punggol with minimal additional cost.
+
+By relying primarily on direct V2P communication and onboard processing, the system remains scalable and easier to deploy across different urban environments.
+
+## Decision Log
 
 The following decision log documents the chronological development of the system, including key technical trade-offs, design decisions, and refinements made throughout the project.
 
@@ -124,152 +145,197 @@ The following decision log documents the chronological development of the system
 
 <img width="983" height="624" alt="image" src="https://github.com/user-attachments/assets/441738dd-55e5-4bed-a389-ffbdd3bab101" />
 
+## AI Usage
 
-AI Usage
+Throughout the development of the **Punggol AV-Guard (AI-Assisted V2P Safety System)**, generative AI tools were used to support several stages of the design and documentation process.
 
-Throughout the development of the Punggol AV-Guard (AI-Assisted V2P Safety System), generative AI tools were used to support multiple stages of the design process.
+---
 
-ChatGPT (Primary Tool)
+### ChatGPT (Primary Tool)
 
-Used during:
+ChatGPT was used during the following stages of the project:
 
-Ideation phase: generating and refining the V2P safety system concept, particularly focusing on pedestrian occlusion scenarios in Punggol
+- **Ideation phase** – generating and refining the V2P safety system concept, particularly focusing on pedestrian occlusion scenarios in Punggol.
+- **System design** – structuring the overall system architecture and identifying key components such as the pedestrian device, V2P communication layer, vehicle OBU, and AI prediction module.
+- **Algorithm development** – generating initial pseudocode for collision risk prediction using **Time-To-Collision (TTC)**.
+- **Documentation** – improving clarity, formatting explanations, and structuring the README content.
 
-System design: structuring the overall architecture, defining key components (pedestrian device, V2P communication layer, vehicle OBU, AI prediction module)
+---
 
-Algorithm development: generating pseudocode for collision risk prediction using Time-To-Collision (TTC)
+### Prompts Used
 
-Documentation: improving clarity, formatting explanations, and structuring the README content
+#### Brainstorming of Ideas and Concept Selection
 
-Prompts Used
+AI tools were used to generate multiple project ideas related to vehicle safety and smart transportation.  
+These ideas were evaluated based on:
 
-Brainstorming of Ideas and Concept Selection
+- Feasibility
+- Scalability
+- Relevance to real-world autonomous vehicle deployment
 
-AI was used to generate multiple project ideas related to vehicle safety and smart transportation. These ideas were evaluated based on:
+The team identified limitations in existing approaches, such as reliance on **line-of-sight detection** and **reactive safety systems**. Based on this evaluation, a **predictive V2P safety system focused on autonomous vehicles in Punggol** was selected.
 
--feasibility
+AI helped expand the design space, but the **final concept selection was based on engineering judgement rather than AI suggestions**.
 
--scalability
+---
 
--relevance to real-world autonomous vehicle deployment
+#### Pseudocode for Risk Estimation
 
-The team identified limitations in existing approaches, such as reliance on line-of-sight detection and reactive safety systems. Based on this evaluation, a predictive V2P safety system focused on autonomous vehicles in Punggol was selected.
-
-AI helped expand the design space, but the final decision was made based on engineering considerations rather than AI suggestions.
-
-Pseudocode for Risk Estimation
-AI-assisted generation of pseudocode for collision risk prediction using TTC was used as an initial reference.
+AI-assisted generation of pseudocode for collision risk prediction using **TTC** was used as an initial reference.
 
 The generated logic was refined by:
 
--defining clear TTC thresholds (1.5 s and 3 s)
+- Defining clear **TTC thresholds (1.5 s and 3 s)**
+- Structuring **risk levels (LOW, MEDIUM, HIGH)**
+- Linking risk levels to corresponding **vehicle responses**
 
--structuring risk levels (LOW, MEDIUM, HIGH)
+This refined logic was incorporated into the **system flowchart and final pseudocode**.
 
--linking risk levels to corresponding vehicle actions
+---
 
-This refined logic was incorporated into the system flowchart and final pseudocode.
+#### V2P Communication Design
 
-V2P Communication Design
+AI tools were used to compare several communication technologies:
 
-AI was used to compare communication technologies such as:
+- Bluetooth Low Energy (BLE)
+- IEEE 802.11p
+- Cellular V2X (C-V2X)
 
--Bluetooth Low Energy (BLE)
+The outputs were evaluated using engineering metrics such as **latency, communication range, and reliability**.
 
--IEEE 802.11p
+Based on this evaluation, **IEEE 802.11p** was selected due to its suitability for **low-latency safety-critical communication** in vehicular environments.
 
--C-V2X
+---
 
-The outputs were evaluated using engineering metrics such as latency, range, and reliability. Based on this evaluation, IEEE 802.11p was selected due to its suitability for low-latency safety-critical communication.
+### Weaknesses of AI Assistance
 
-Weaknesses
+Despite its usefulness, several limitations were identified in AI-generated outputs.
 
-Despite its usefulness, several limitations and inaccuracies were identified in AI-generated outputs:
+#### Unrealistic or Unverified Parameters
 
-Unrealistic or Unverified Parameters
+AI sometimes suggested communication parameters (e.g., latency or range) without sufficient justification.  
+These values were verified and adjusted based on realistic system requirements.
 
-AI sometimes suggested communication parameters (e.g., latency, range) without sufficient justification.
+For example:
 
-These values were verified and adjusted based on realistic system requirements
+- Latency was constrained to **<100 ms** for safety-critical V2P communication.
 
-For example, latency was constrained to <100 ms for safety-critical V2P communication
+---
 
-Oversimplified Risk Calculations
+#### Oversimplified Risk Calculations
 
-Initial AI outputs treated TTC as a simple direct calculation without considering:
+Initial AI outputs treated **TTC** as a simple direct calculation without considering:
 
--continuous monitoring of dynamic environments
+- Continuous monitoring of dynamic environments
+- Realistic system behaviour
 
--realistic system behaviour
+These limitations were addressed by incorporating **structured decision logic and risk classification** into the final flowchart and pseudocode.
 
-This was refined by incorporating structured decision logic and risk classification into the flowchart and pseudocode.
+---
 
-Incomplete System Integration Details
+#### Incomplete System Integration Details
 
 AI-generated architectures were often too generic and lacked:
 
-clear system boundaries
+- Clear system boundaries
+- Integration details between components such as the **OBU and vehicle control systems**
 
-integration between components such as OBU and vehicle control systems
+These issues were resolved by refining the architecture into **well-defined subsystems with clear data flow**.
 
-These issues were resolved by refining the architecture into well-defined subsystems with clear data flow.
+---
 
-Lack of Context Awareness
+#### Lack of Context Awareness
 
 AI occasionally assumed ideal conditions, such as:
 
-perfect GPS accuracy
-no signal loss or communication delay
+- Perfect GPS accuracy
+- No signal loss
+- No communication delay
 
-Adjustments were made to reflect real-world conditions, including:
+The system design was refined to reflect real-world conditions, including:
 
--occlusion scenarios (e.g., blocked view by buses)
+- **Occlusion scenarios** (e.g., pedestrians blocked by buses)
+- **Communication reliability constraints**
 
--communication reliability constraints
+---
 
--Human Contribution
+### Human Contribution
 
-All AI-generated outputs were critically reviewed, validated, and refined by the team.
+All AI-generated outputs were **critically reviewed, validated, and refined by the project team**.
 
-Key engineering decisions, including:
+Key engineering decisions—including:
 
--selection of communication technology
+- Selection of communication technology
+- Adoption of edge processing
+- Design of TTC-based risk evaluation
+- System architecture refinement
 
--adoption of edge processing
+were made based on **technical reasoning and engineering analysis rather than AI suggestions alone**.
 
--design of TTC-based risk evaluation
+---
 
--system architecture refinement
+## References (APA)
 
-were made based on technical reasoning rather than AI suggestions alone.
+National Highway Traffic Safety Administration. (n.d.). *Advanced driver assistance systems (ADAS).*  
+https://www.nhtsa.gov
 
-References. (APA)
+Rahman, M. A., Hasan, M. K., Hossain, M. S., & Alrajeh, N. (2020). Smart traffic management system: A review. *IEEE Access, 8*, 186456–186475.  
+https://doi.org/10.1109/ACCESS.2020.3029927
 
-National Highway Traffic Safety Administration. (n.d.). Advanced driver assistance systems (ADAS). https://www.nhtsa.gov
+Hartenstein, H., & Laberteaux, K. P. (2010). *VANET: Vehicular applications and inter-networking technologies.* Wiley.
 
-Rahman, M. A., Hasan, M. K., Hossain, M. S., & Alrajeh, N. (2020). Smart traffic management system: A review. IEEE Access, 8, 186456–186475. https://doi.org/10.1109/ACCESS.2020.3029927
+IEEE. (2010). *IEEE standard for wireless access in vehicular environments (IEEE 802.11p).* IEEE.
 
-Hartenstein, H., & Laberteaux, K. P. (2010). VANET: Vehicular applications and inter-networking technologies. Wiley.
+3rd Generation Partnership Project (3GPP). (2017). *Study on LTE-based V2X services (Release 14).*  
+https://www.3gpp.org
 
-IEEE. (2010). IEEE standard for wireless access in vehicular environments (WAVE) (IEEE 802.11p). IEEE.
+Land Transport Authority. (n.d.). *Autonomous vehicles in Singapore.*  
+https://www.lta.gov.sg
 
-3rd Generation Partnership Project (3GPP). (2017). Study on LTE-based V2X services (Release 14). https://www.3gpp.org
+### Individual Reflection
 
-Land Transport Authority. (n.d.). Autonomous vehicles in Singapore. https://www.lta.gov.sg
+**Cherlyn**
 
-Individual Reflection:
+I mainly focused on system architecture and the overall integration of system components. 
+I was responsible for structuring the README and ensuring consistency across all sections. 
+Through this project, I gained a better understanding of how to design a complete system 
+from a high-level perspective, including defining system boundaries and integrating 
+multiple subsystems into a coherent architecture.
 
-Cherlyn:
-I mainly focused on system architecture and overall integration of components. I was responsible for structuring the README and ensuring consistency across all sections and through this project, I gained a better understanding of how to design a complete system from a high-level perspective, including defining system boundaries and integrating multiple subsystems.
+---
 
-Melody:
-I worked on communication design and data flow within the system and explored different V2P communication technologies and contributed to the message structure and data flow diagram. I also gained insights into how communication constraints such as latency and range affect system performance in safety-critical applications.
+**Melody**
 
-Stewart:
-I handled system logic and safety-related aspects of the project, including the development of the flowchart and fail-safe mechanisms. I learned how to translate system behaviour into structured logic and understood the importance of redundancy and reliability in safety systems.
+I worked on the communication design and data flow within the system. I explored different 
+V2P communication technologies and contributed to the message structure and the data flow 
+diagram. Through this process, I gained insights into how communication constraints such as 
+latency, reliability, and transmission range can significantly affect the performance of 
+safety-critical systems.
 
-WeiJie:
-My main focus was on algorithm development, particularly the use of time-to-collision (TTC) for risk evaluation. I helped in developing the pseudocode and contributed to defining risk thresholds which has allowed me to gain a deeper understanding of how mathematical models can be applied to real-world safety problems.
+---
 
-Khair:
-I contributed to documentation development and user interaction design, including the formulation of the use case scenario and the design of the pedestrian warning mechanism. I also assisted in refining technical explanations to improve clarity, coherence, and overall readability. This has allowed me to develop a stronger understanding of effectively communicating complex engineering concepts in a structured and professional manner.
+**Stewart**
+
+My contribution focused on system logic and safety-related aspects of the project, including 
+the development of the flowchart and fail-safe mechanisms. I learned how to translate system 
+behaviour into structured logic and understood the importance of redundancy and reliability 
+when designing safety systems for autonomous vehicles.
+
+---
+
+**WeiJie**
+
+My main focus was on algorithm development, particularly the use of Time-To-Collision (TTC) 
+for collision risk evaluation. I helped develop the pseudocode and contributed to defining 
+the TTC thresholds used for risk classification. This allowed me to gain a deeper understanding 
+of how mathematical models can be applied to real-world vehicle safety problems.
+
+---
+
+**Khair**
+
+I contributed to documentation development and user interaction design, including the 
+formulation of the system use-case scenario and the design of the pedestrian warning 
+mechanism. I also assisted in refining technical explanations to improve clarity, coherence, 
+and overall readability. Through this process, I developed a stronger understanding of how 
+complex engineering concepts can be communicated clearly and professionally.
