@@ -274,3 +274,14 @@ IEEE. (2010). IEEE standard for wireless access in vehicular environments (WAVE)
 
 Land Transport Authority. (n.d.). Autonomous vehicles in Singapore. https://www.lta.gov.sg
 
+Individual Reflection:
+Cherlyn:
+I mainly focused on system architecture and overall integration of components. I was responsible for structuring the README and ensuring consistency across all sections and through this project, I gained a better understanding of how to design a complete system from a high-level perspective, including defining system boundaries and integrating multiple subsystems.\
+Melody:
+I worked on communication design and data flow within the system and explored different V2P communication technologies and contributed to the message structure and data flow diagram. I also gained insights into how communication constraints such as latency and range affect system performance in safety-critical applications.
+Stewart:
+I handled system logic and safety-related aspects of the project, including the development of the flowchart and fail-safe mechanisms. I learned how to translate system behaviour into structured logic and understood the importance of redundancy and reliability in safety systems.
+WeiJie:
+My main focus was on algorithm development, particularly the use of time-to-collision (TTC) for risk evaluation. I helped in developing the pseudocode and contributed to defining risk thresholds which has allowed me to gain a deeper understanding of how mathematical models can be applied to real-world safety problems.
+Khai:
+I contributed to documentation development and user interaction design, including the formulation of the use case scenario and the design of the pedestrian warning mechanism. I also assisted in refining technical explanations to improve clarity, coherence, and overall readability. This has allowed me to develop a stronger understanding of effectively communicating complex engineering concepts in a structured and professional manner.
