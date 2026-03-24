@@ -275,6 +275,7 @@ IEEE. (2010). IEEE standard for wireless access in vehicular environments (WAVE)
 Land Transport Authority. (n.d.). Autonomous vehicles in Singapore. https://www.lta.gov.sg
 
 Individual Reflection:
+
 Cherlyn:
 I mainly focused on system architecture and overall integration of components. I was responsible for structuring the README and ensuring consistency across all sections and through this project, I gained a better understanding of how to design a complete system from a high-level perspective, including defining system boundaries and integrating multiple subsystems.
 
