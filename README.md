@@ -1,4 +1,5 @@
 Punggol AV-Guard: AI-Assisted V2P Safety System for Autonomous Vehicles
+
 Brief Description
 
 Autonomous vehicles (AVs) deployed in urban environments such as Punggol operate in complex and pedestrian-heavy scenarios. Although AVs are equipped with advanced perception systems such as LiDAR, radar, and cameras, they still face limitations in detecting pedestrians in occluded environments, such as behind buses, parked vehicles, or infrastructure. These limitations may lead to delayed detection and reduced reaction time, posing safety risks to vulnerable road users including pedestrians, cyclists, and wheelchair users.
