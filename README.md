@@ -135,8 +135,13 @@ Decision Log
 
 The following decision log documents the chronological development of the system, including key technical trade-offs, design decisions, and refinements made throughout the project.
 
+<img width="984" height="903" alt="image" src="https://github.com/user-attachments/assets/629e5602-42be-4625-af15-e1ed2acc90d0" />
 
-References (APA)
+<img width="981" height="556" alt="image" src="https://github.com/user-attachments/assets/accb85c5-2d6a-4d8b-8d14-159abebb9f8d" />
+
+<img width="985" height="630" alt="image" src="https://github.com/user-attachments/assets/3b7dab3a-7ae4-42b3-b3e5-4c884ef16915" />
+
+References. (APA)
 
 National Highway Traffic Safety Administration. (n.d.). Advanced driver assistance systems (ADAS). https://www.nhtsa.gov
 
