@@ -288,6 +288,41 @@ were made based on **technical reasoning and engineering analysis rather than AI
 
 ---
 
+### Example AI Prompts and Outputs
+
+The following examples show prompts used during the design process and excerpts of the generated outputs from ChatGPT.
+
+#### Prompt 1 – Communication Technology Comparison
+
+The following prompt was used to compare communication technologies for V2P safety systems.
+
+<img width="627" height="663" alt="prompt 1 1" src="https://github.com/user-attachments/assets/487cb5c2-b572-4468-95b7-0f2cbf08e7d5" />
+<img width="612" height="567" alt="prompt 1 2" src="https://github.com/user-attachments/assets/e4b30d43-6e5d-4637-9278-75f21cba3552" />
+
+*Figure X. Example prompt and generated output comparing BLE, IEEE 802.11p, and C-V2X communication technologies.*
+
+#### Prompt 2 – TTC Collision Risk Algorithm
+
+The following prompt was used to generate pseudocode and explanation for the Time-To-Collision (TTC) collision risk evaluation method.
+
+<img width="623" height="623" alt="prompt 2 1" src="https://github.com/user-attachments/assets/190367c9-6f57-482b-8d60-42828103c261" />
+<img width="587" height="513" alt="prompt 2 2" src="https://github.com/user-attachments/assets/84010f2a-76e7-44e0-9218-00505d6cd394" />
+
+*Figure X. Example prompt and generated output explaining the Time-To-Collision (TTC) based collision risk detection method.*
+
+---
+
+#### Prompt 3 – Edge vs Cloud Processing
+
+The following prompt was used to compare edge computing and cloud computing approaches for real-time safety systems in autonomous vehicles.
+
+<img width="605" height="607" alt="prompt 3 1" src="https://github.com/user-attachments/assets/b7a56fe5-265f-4e3c-8807-0517005d4ca7" />
+<img width="598" height="677" alt="prompt 3 2" src="https://github.com/user-attachments/assets/6a2b77ce-99d9-43e9-a4af-186828c9135a" />
+
+*Figure X. Example prompt and generated output comparing edge computing and cloud computing for autonomous vehicle safety systems.*
+
+---
+
 ## References (APA)
 
 National Highway Traffic Safety Administration. (n.d.). *Advanced driver assistance systems (ADAS).*  
