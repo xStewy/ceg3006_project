@@ -27,7 +27,7 @@ Figure 1. System architecture of the proposed V2P safety system.
 
 The proposed system consists of four main components: the pedestrian device, the V2P communication layer, the vehicle onboard unit (OBU), and the AI prediction module.
 
-A person walking down the street usually has a device like a smartphone or a wearable gadget on them. This device collects information about how they're moving, using GPS and special sensors inside it. It knows where they are, how fast they're walking, and which direction they're heading. Every now and then, the device sends out a message to nearby vehicles, called a V2P safety message, to let them know all this information.
+Pedestrian walking down the street usually has a device like a smartphone or a wearable gadget on them. This device collects information about how they're moving, using GPS and special sensors inside it. It knows where they are, how fast they're walking, and which direction they're heading. Every now and then, the device sends out a message to nearby vehicles, called a V2P safety message, to let them know all this information.
 The communication layer makes it possible to send data directly using special technologies like IEEE 802.11p or C-V2X. These technologies are designed to help vehicles communicate with each other quickly and with minimal delay. They are really good at sending information fast, which is important for vehicles to stay safe on the road.
 
 The onboard computer in a vehicle gets messages from pedestrians and other sources, and it uses that information to help the vehicle make safe decisions. It combines what it knows about the pedestrians with what it knows about the vehicle itself, like how fast it's going and where it's headed.
@@ -139,7 +139,8 @@ The following decision log documents the chronological development of the system
 
 <img width="981" height="556" alt="image" src="https://github.com/user-attachments/assets/accb85c5-2d6a-4d8b-8d14-159abebb9f8d" />
 
-<img width="985" height="630" alt="image" src="https://github.com/user-attachments/assets/3b7dab3a-7ae4-42b3-b3e5-4c884ef16915" />
+<img width="983" height="624" alt="image" src="https://github.com/user-attachments/assets/441738dd-55e5-4bed-a389-ffbdd3bab101" />
+
 
 References. (APA)
 
