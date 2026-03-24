@@ -83,7 +83,7 @@ trigger vehicle_response based on risk
 
 <img width="1006" height="1255" alt="image" src="https://github.com/user-attachments/assets/c4beef99-92f2-4e91-b4ca-284c73f15d73" />
 
-Figure 2. Flowchart illustrating the collision risk evaluation process based on time-to-collision (TTC).
+Figure 3. Flowchart illustrating the collision risk evaluation process based on time-to-collision (TTC).
 
 Engineering Considerations in Risk Evaluation
 
