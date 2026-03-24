@@ -161,9 +161,7 @@ Brainstorming of Ideas and Concept Selection
 AI was used to generate multiple project ideas related to vehicle safety and smart transportation. These ideas were evaluated based on:
 
 -feasibility
-
 -scalability
-
 -relevance to real-world autonomous vehicle deployment
 
 The team identified limitations in existing approaches, such as reliance on line-of-sight detection and reactive safety systems. Based on this evaluation, a predictive V2P safety system focused on autonomous vehicles in Punggol was selected.
@@ -171,15 +169,11 @@ The team identified limitations in existing approaches, such as reliance on line
 AI helped expand the design space, but the final decision was made based on engineering considerations rather than AI suggestions.
 
 Pseudocode for Risk Estimation
-
 AI-assisted generation of pseudocode for collision risk prediction using TTC was used as an initial reference.
 
 The generated logic was refined by:
-
 -defining clear TTC thresholds (1.5 s and 3 s)
-
 -structuring risk levels (LOW, MEDIUM, HIGH)
-
 -linking risk levels to corresponding vehicle actions
 
 This refined logic was incorporated into the system flowchart and final pseudocode.
@@ -187,29 +181,22 @@ This refined logic was incorporated into the system flowchart and final pseudoco
 V2P Communication Design
 
 AI was used to compare communication technologies such as:
-
 -Bluetooth Low Energy (BLE)
-
 -IEEE 802.11p
-
 -C-V2X
 
 The outputs were evaluated using engineering metrics such as latency, range, and reliability. Based on this evaluation, IEEE 802.11p was selected due to its suitability for low-latency safety-critical communication.
 
 Weaknesses
-
 Despite its usefulness, several limitations and inaccuracies were identified in AI-generated outputs:
 
 Unrealistic or Unverified Parameters
-
 AI sometimes suggested communication parameters (e.g., latency, range) without sufficient justification.
-
 These values were verified and adjusted based on realistic system requirements
 
 For example, latency was constrained to <100 ms for safety-critical V2P communication
 
 Oversimplified Risk Calculations
-
 Initial AI outputs treated TTC as a simple direct calculation without considering:
 
 -continuous monitoring of dynamic environments
@@ -218,7 +205,6 @@ Initial AI outputs treated TTC as a simple direct calculation without considerin
 This was refined by incorporating structured decision logic and risk classification into the flowchart and pseudocode.
 
 Incomplete System Integration Details
-
 AI-generated architectures were often too generic and lacked:
 
 clear system boundaries
@@ -227,7 +213,6 @@ integration between components such as OBU and vehicle control systems
 These issues were resolved by refining the architecture into well-defined subsystems with clear data flow.
 
 Lack of Context Awareness
-
 AI occasionally assumed ideal conditions, such as:
 
 perfect GPS accuracy
@@ -235,18 +220,18 @@ no signal loss or communication delay
 
 Adjustments were made to reflect real-world conditions, including:
 
-occlusion scenarios (e.g., blocked view by buses)
-communication reliability constraints
-Human Contribution
+-occlusion scenarios (e.g., blocked view by buses)
+-communication reliability constraints
+-Human Contribution
 
 All AI-generated outputs were critically reviewed, validated, and refined by the team.
 
 Key engineering decisions, including:
 
-selection of communication technology
-adoption of edge processing
-design of TTC-based risk evaluation
-system architecture refinement
+-selection of communication technology
+-adoption of edge processing
+-design of TTC-based risk evaluation
+-system architecture refinement
 
 were made based on technical reasoning rather than AI suggestions alone.
 
