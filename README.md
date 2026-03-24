@@ -48,42 +48,25 @@ The system operates through structured message exchanges between pedestrian devi
 
 Figure 2. Data flow diagram illustrating how pedestrian data is transmitted, validated, and processed within the system
 
-Pseudocode (Collision Risk Prediction)
 
-receive pedestrian_data
+<img width="395" height="470" alt="V2P-pseodo drawio" src="https://github.com/user-attachments/assets/59250ae5-7822-4fab-a74f-970b2967825f" />
 
-receive vehicle_data
+Figure 3. Pseudocode describing the collision risk prediction algorithm based on Time-To-Collision (TTC).
 
-calculate relative_distance
-
-calculate relative_speed
-
-if relative_speed > 0:
-
- TTC = relative_distance / relative_speed
- 
-else:
-
- TTC = infinity
- 
-if TTC < 1.5:
-
- risk = HIGH
- 
-elif TTC < 3:
-
- risk = MEDIUM
- 
-else:
-
- risk = LOW
- 
-trigger vehicle_response based on risk
-
+The pseudocode outlines how the system evaluates collision risk using pedestrian and vehicle data. 
+The algorithm computes relative distance and relative speed to determine the Time-To-Collision (TTC). 
+Based on predefined thresholds, the system classifies the situation into HIGH, MEDIUM, or LOW risk 
+and triggers the corresponding vehicle response.
 
 <img width="1006" height="1255" alt="image" src="https://github.com/user-attachments/assets/c4beef99-92f2-4e91-b4ca-284c73f15d73" />
 
-Figure 3. Flowchart illustrating the collision risk evaluation process based on time-to-collision (TTC).
+Figure 4. Flowchart illustrating the collision risk evaluation process based on Time-To-Collision (TTC).
+
+The flowchart shows the collision risk evaluation process used by the system. 
+The algorithm receives pedestrian and vehicle data, calculates relative distance 
+and relative velocity, and computes the Time-To-Collision (TTC). Based on 
+predefined thresholds, the system classifies the situation into HIGH, MEDIUM, 
+or LOW risk and triggers the appropriate vehicle response.
 
 Engineering Considerations in Risk Evaluation
 
@@ -288,5 +271,5 @@ I handled system logic and safety-related aspects of the project, including the 
 WeiJie:
 My main focus was on algorithm development, particularly the use of time-to-collision (TTC) for risk evaluation. I helped in developing the pseudocode and contributed to defining risk thresholds which has allowed me to gain a deeper understanding of how mathematical models can be applied to real-world safety problems.
 
-Khai:
+Khair:
 I contributed to documentation development and user interaction design, including the formulation of the use case scenario and the design of the pedestrian warning mechanism. I also assisted in refining technical explanations to improve clarity, coherence, and overall readability. This has allowed me to develop a stronger understanding of effectively communicating complex engineering concepts in a structured and professional manner.
