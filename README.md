@@ -43,6 +43,20 @@ So, the action layer is what helps the self-driving car react to any potential d
 
 The system adopts an edge-based processing approach within the vehicle onboard unit to minimise latency and ensure real-time responsiveness. Cloud-based processing was considered but rejected due to additional communication delays and reliability concerns in safety-critical applications. By performing computation locally within the vehicle, the system ensures consistent performance even in environments with unstable network connectivity.
 
+## Use Case Diagram
+
+<img width="929" height="186" alt="usecase diagram" src="https://github.com/user-attachments/assets/94731af1-1d0d-4e22-81a6-864c4e2d5a71" />
+
+Figure 2. Use case diagram of the Punggol AV-Guard V2P Safety System showing
+interactions between pedestrians and autonomous vehicles for collision risk
+detection and response.
+
+The diagram illustrates how pedestrians broadcast movement information to the
+vehicle through V2P communication. The autonomous vehicle receives this data,
+evaluates the collision risk using the TTC algorithm, and triggers appropriate
+vehicle responses such as slowing down or sending warnings to pedestrians.
+
+
 ## Functions and Messages
 
 The system operates through structured message exchanges between pedestrian devices and autonomous vehicles.
@@ -51,12 +65,12 @@ The system operates through structured message exchanges between pedestrian devi
 
 <img width="399" height="1253" alt="image" src="https://github.com/user-attachments/assets/3db00868-bf55-4787-b6c0-5b741d443d31" />
 
-Figure 2. Data flow diagram illustrating how pedestrian data is transmitted, validated, and processed within the system
+Figure 3. Data flow diagram illustrating how pedestrian data is transmitted, validated, and processed within the system
 
 
 <img width="395" height="470" alt="V2P-pseodo drawio" src="https://github.com/user-attachments/assets/59250ae5-7822-4fab-a74f-970b2967825f" />
 
-Figure 3. Pseudocode describing the collision risk prediction algorithm based on Time-To-Collision (TTC).
+Figure 4. Pseudocode describing the collision risk prediction algorithm based on Time-To-Collision (TTC).
 
 The pseudocode outlines how the system evaluates collision risk using pedestrian and vehicle data. 
 The algorithm computes relative distance and relative speed to determine the Time-To-Collision (TTC). 
@@ -65,7 +79,7 @@ and triggers the corresponding vehicle response.
 
 <img width="1006" height="1255" alt="image" src="https://github.com/user-attachments/assets/c4beef99-92f2-4e91-b4ca-284c73f15d73" />
 
-Figure 4. Flowchart illustrating the collision risk evaluation process based on Time-To-Collision (TTC).
+Figure 5. Flowchart illustrating the collision risk evaluation process based on Time-To-Collision (TTC).
 
 The flowchart shows the collision risk evaluation process used by the system. 
 The algorithm receives pedestrian and vehicle data, calculates relative distance 
