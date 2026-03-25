@@ -153,11 +153,9 @@ By relying primarily on direct V2P communication and onboard processing, the sys
 
 The following decision log documents the chronological development of the system, including key technical trade-offs, design decisions, and refinements made throughout the project.
 
-<img width="984" height="903" alt="image" src="https://github.com/user-attachments/assets/629e5602-42be-4625-af15-e1ed2acc90d0" />
-
-<img width="981" height="556" alt="image" src="https://github.com/user-attachments/assets/accb85c5-2d6a-4d8b-8d14-159abebb9f8d" />
-
-<img width="983" height="624" alt="image" src="https://github.com/user-attachments/assets/441738dd-55e5-4bed-a389-ffbdd3bab101" />
+<img width="1305" height="519" alt="log 1" src="https://github.com/user-attachments/assets/4137e812-5221-466d-8702-14cd6b16de21" />
+<img width="1302" height="526" alt="log 2" src="https://github.com/user-attachments/assets/3ef58a73-133d-4a5e-bb30-470e7caca356" />
+<img width="1302" height="526" alt="log 3" src="https://github.com/user-attachments/assets/24005b3e-73d3-4f0e-b0dc-2466784ad000" />
 
 ## AI Usage
 
@@ -299,7 +297,7 @@ The following prompt was used to compare communication technologies for V2P safe
 <img width="627" height="663" alt="prompt 1 1" src="https://github.com/user-attachments/assets/487cb5c2-b572-4468-95b7-0f2cbf08e7d5" />
 <img width="612" height="567" alt="prompt 1 2" src="https://github.com/user-attachments/assets/e4b30d43-6e5d-4637-9278-75f21cba3552" />
 
-*Figure X. Example prompt and generated output comparing BLE, IEEE 802.11p, and C-V2X communication technologies.*
+Figure 6. Example prompt and generated output comparing BLE, IEEE 802.11p, and C-V2X communication technologies.
 
 #### Prompt 2 – TTC Collision Risk Algorithm
 
@@ -308,7 +306,7 @@ The following prompt was used to generate pseudocode and explanation for the Tim
 <img width="623" height="623" alt="prompt 2 1" src="https://github.com/user-attachments/assets/190367c9-6f57-482b-8d60-42828103c261" />
 <img width="587" height="513" alt="prompt 2 2" src="https://github.com/user-attachments/assets/84010f2a-76e7-44e0-9218-00505d6cd394" />
 
-*Figure X. Example prompt and generated output explaining the Time-To-Collision (TTC) based collision risk detection method.*
+Figure 7. Example prompt and generated output explaining the Time-To-Collision (TTC) based collision risk detection method.
 
 ---
 
@@ -319,7 +317,7 @@ The following prompt was used to compare edge computing and cloud computing appr
 <img width="605" height="607" alt="prompt 3 1" src="https://github.com/user-attachments/assets/b7a56fe5-265f-4e3c-8807-0517005d4ca7" />
 <img width="598" height="677" alt="prompt 3 2" src="https://github.com/user-attachments/assets/6a2b77ce-99d9-43e9-a4af-186828c9135a" />
 
-*Figure X. Example prompt and generated output comparing edge computing and cloud computing for autonomous vehicle safety systems.*
+Figure 8. Example prompt and generated output comparing edge computing and cloud computing for autonomous vehicle safety systems.
 
 ---
 
