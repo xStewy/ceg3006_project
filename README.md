@@ -155,7 +155,7 @@ The following decision log documents the chronological development of the system
 
 <img width="1305" height="519" alt="log 1" src="https://github.com/user-attachments/assets/4137e812-5221-466d-8702-14cd6b16de21" />
 <img width="1302" height="526" alt="log 2" src="https://github.com/user-attachments/assets/3ef58a73-133d-4a5e-bb30-470e7caca356" />
-<img width="1302" height="526" alt="log 3" src="https://github.com/user-attachments/assets/24005b3e-73d3-4f0e-b0dc-2466784ad000" />
+<img width="1305" height="459" alt="log 3" src="https://github.com/user-attachments/assets/84298b49-7260-4a45-838d-e58aac527ae9" />
 
 ## AI Usage
 
